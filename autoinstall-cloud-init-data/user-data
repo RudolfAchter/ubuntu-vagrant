@@ -93,7 +93,7 @@ autoinstall:
     username: vagrant
     password: $6$F0PVn0vzBz4clpS/$9xoMqUQsuLvHDttpLUKLHLv./rd3cXnc3YL.JipisgdKn.0HNTYHR.5/f1XM6XGRqFYI1DrB21paiqnU69QWL0
   keyboard:
-    layout: pt
+    layout: de
   locale: en_US
   ssh:
     allow-pw: true

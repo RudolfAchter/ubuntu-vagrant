@@ -48,6 +48,11 @@ variable "vsphere_folder" {
   default = env("VSPHERE_TEMPLATE_FOLDER")
 }
 
+variable "vsphere_template_name" {
+  type    = string
+  default = env("VSPHERE_TEMPLATE_NAME")
+}
+
 variable "vsphere_network" {
   type    = string
   default = env("VSPHERE_VLAN")
@@ -89,7 +94,7 @@ source "vsphere-iso" "ubuntu-amd64" {
   vcenter_server      = var.vsphere_host
   username            = var.vsphere_username
   password            = var.vsphere_password
-  vm_name             = "ubuntu-${var.version}-amd64-vsphere"
+  vm_name             = "${var.vsphere_template_name}"
   datacenter          = var.vsphere_datacenter
   cluster             = var.vsphere_cluster
   host                = var.vsphere_esxi_host
